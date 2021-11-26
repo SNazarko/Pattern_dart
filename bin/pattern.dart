@@ -1,5 +1,4 @@
-import 'e_chain_of_responsibility_method.dart';
-import 'f_command_method.dart';
+import 'h_builder_method.dart';
 
 void main() {
   //-------------------factory_method-------------------------------//
@@ -72,5 +71,29 @@ void main() {
   // developer.updateRecord();
   // developer.deleteRecord();
   //
-  //----------------Iterator_method------------------------------------//
+  //--------------------Mediator_method--------------------------//
+  // SimpleTextChat chat = SimpleTextChat();
+  // User admin = Admin(chat: chat, name: "Admin");
+  // User user1 = SimpleUser(chat: chat, name: "User1");
+  // User user2 = SimpleUser(chat: chat, name: "User2");
+  //
+  // chat.setAdmin(admin);
+  // chat.addUsersToChat(user1);
+  // chat.addUsersToChat(user2);
+  //
+  //  user1.sendMessage("Привіт, я користувач 1!");
+  //  user2.sendMessage("Привіт, я користувач 2!");
+  // admin.sendMessage("Я Адмін");
+
+  //--------------------Builder_method--------------------------//
+  //
+  // Director director = Director();
+  // Director director2 = Director();
+  // director.setWebsiteBuilder(VisitCardWebsiteBuilder());
+  // director2.setWebsiteBuilder(EnterpriseWebsiteBuilder());
+  // Website website = director.buildWebsite();
+  // Website website2 = director2.buildWebsite();
+  // print(website);
+  // print(website2);
+  //
 }
