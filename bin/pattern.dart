@@ -1,4 +1,4 @@
-import 'h_builder_method.dart';
+import 'j_composite_method.dart';
 
 void main() {
   //-------------------factory_method-------------------------------//
@@ -95,5 +95,27 @@ void main() {
   // Website website2 = director2.buildWebsite();
   // print(website);
   // print(website2);
+  //
+  //--------------------Prototype_method--------------------------//
+  //
+  // MyCar myCar = MyCar(4, 'Модний кузов', 'Потужний мотор');
+  // print(myCar);
+  // MyCar cloneMyCar = myCar.clone() as MyCar;
+  // print(cloneMyCar);
+  // CloneCar factory = CloneCar(myCar);
+  // MyCar cloneMyCar2 = factory.cloneMyCar();
+  // print(cloneMyCar2);
+  //
+  //--------------------Composite_method--------------------------//
+  // Team team = Team();
+  // Developer firstJavaDeveloper = JavaDeveloper();
+  // Developer secondJavaDeveloper = JavaDeveloper();
+  // Developer cppDeveloper = CppDeveloper();
+  //
+  // team.addDeveloper(firstJavaDeveloper);
+  // team.addDeveloper(secondJavaDeveloper);
+  // team.addDeveloper(cppDeveloper);
+  //
+  // team.createProject();
   //
 }
