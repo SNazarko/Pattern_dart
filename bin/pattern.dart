@@ -1,8 +1,9 @@
 import 'j_composite_method.dart';
+import 'k_decorator_method.dart';
 
 void main() {
   //-------------------factory_method-------------------------------//
-  //
+
   // final car1 = Car(CarModel.tesla);
   // final car2 = Car(CarModel.bmw);
   // final car3 = Car(CarModel.mercedes);
@@ -55,7 +56,7 @@ void main() {
   // reportNotifier.notifierManager('Все добре', Priority.routine);
   // reportNotifier.notifierManager('Треба додаткова увага!', Priority.important);
   // reportNotifier.notifierManager('Очікуємо великий обвал ...', Priority.danger);
-  //
+
   //----------------Command_method------------------------------------//
   //
   // DatabaseClient databaseClient = DatabaseClient();
@@ -81,8 +82,8 @@ void main() {
   // chat.addUsersToChat(user1);
   // chat.addUsersToChat(user2);
   //
-  //  user1.sendMessage("Привіт, я користувач 1!");
-  //  user2.sendMessage("Привіт, я користувач 2!");
+  // user1.sendMessage("Привіт, я користувач 1!");
+  // user2.sendMessage("Привіт, я користувач 2!");
   // admin.sendMessage("Я Адмін");
 
   //--------------------Builder_method--------------------------//
@@ -95,7 +96,7 @@ void main() {
   // Website website2 = director2.buildWebsite();
   // print(website);
   // print(website2);
-  //
+
   //--------------------Prototype_method--------------------------//
   //
   // MyCar myCar = MyCar(4, 'Модний кузов', 'Потужний мотор');
@@ -117,5 +118,5 @@ void main() {
   // team.addDeveloper(cppDeveloper);
   //
   // team.createProject();
-  //
+  // //
 }
