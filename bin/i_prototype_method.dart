@@ -50,3 +50,13 @@ class CloneCar {
     return myCar.clone() as MyCar;
   }
 }
+
+void main() {
+  MyCar myCar = MyCar(4, 'Модний кузов', 'Потужний мотор');
+  print(myCar);
+  MyCar cloneMyCar = myCar.clone() as MyCar;
+  print(cloneMyCar);
+  CloneCar factory = CloneCar(myCar);
+  MyCar cloneMyCar2 = factory.cloneMyCar();
+  print(cloneMyCar2);
+}

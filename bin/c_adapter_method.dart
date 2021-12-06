@@ -45,3 +45,11 @@ class AdapterApplicationToDatabaseCar extends Application
     updateCar();
   }
 }
+
+void main() {
+  final DatabaseCar databaseCar = AdapterApplicationToDatabaseCar();
+  databaseCar.update();
+  databaseCar.select();
+  databaseCar.remove();
+  databaseCar.insert();
+}

@@ -33,3 +33,16 @@ class Team {
     }
   }
 }
+
+void main() {
+  Team team = Team();
+  Developer firstJavaDeveloper = JavaDeveloper();
+  Developer secondJavaDeveloper = JavaDeveloper();
+  Developer cppDeveloper = CppDeveloper();
+
+  team.addDeveloper(firstJavaDeveloper);
+  team.addDeveloper(secondJavaDeveloper);
+  team.addDeveloper(cppDeveloper);
+
+  team.createProject();
+}

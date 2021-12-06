@@ -89,3 +89,14 @@ class Director {
     return website;
   }
 }
+
+void main() {
+  Director director = Director();
+  Director director2 = Director();
+  director.setWebsiteBuilder(VisitCardWebsiteBuilder());
+  director2.setWebsiteBuilder(EnterpriseWebsiteBuilder());
+  Website website = director.buildWebsite();
+  Website website2 = director2.buildWebsite();
+  print(website);
+  print(website2);
+}

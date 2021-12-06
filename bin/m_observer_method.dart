@@ -64,5 +64,5 @@ void main() {
   jobSite.addObserver(secondSubscribers);
 
   jobSite.addVacancy('Третя вакансія');
-  // jobSite.removeVacancy('Перша вакансія');
+  jobSite.removeVacancy('Перша вакансія');
 }

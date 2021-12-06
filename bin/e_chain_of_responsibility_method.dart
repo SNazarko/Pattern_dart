@@ -50,3 +50,16 @@ class SmsNotifier extends Notifier {
     print('Повідомляємо за допомогою SMS менеджеру $message');
   }
 }
+
+void main() {
+  Notifier reportNotifier = SimpleReportNotifier(Priority.routine);
+  Notifier emailNotifier = EmailNotifier(Priority.important);
+  Notifier smsNotifier = SmsNotifier(Priority.danger);
+
+  reportNotifier.setNextNotifier(emailNotifier);
+  reportNotifier.setNextNotifier(smsNotifier);
+
+  reportNotifier.notifierManager('Все добре', Priority.routine);
+  reportNotifier.notifierManager('Треба додаткова увага!', Priority.important);
+  reportNotifier.notifierManager('Очікуємо великий обвал ...', Priority.danger);
+}

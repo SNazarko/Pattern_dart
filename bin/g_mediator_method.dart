@@ -77,3 +77,18 @@ class SimpleTextChat implements Chat {
     admin.getMessage(message);
   }
 }
+
+void main() {
+  SimpleTextChat chat = SimpleTextChat();
+  User admin = Admin(chat: chat, name: "Admin");
+  User user1 = SimpleUser(chat: chat, name: "User1");
+  User user2 = SimpleUser(chat: chat, name: "User2");
+
+  chat.setAdmin(admin);
+  chat.addUsersToChat(user1);
+  chat.addUsersToChat(user2);
+
+  user1.sendMessage("Привіт, я користувач 1!");
+  user2.sendMessage("Привіт, я користувач 2!");
+  admin.sendMessage("Я Адмін");
+}

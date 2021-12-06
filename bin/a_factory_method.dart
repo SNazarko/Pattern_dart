@@ -1,40 +1,53 @@
-enum CarModel {
-  tesla,
-  bmw,
-  mercedes,
-}
-
 abstract class Car {
-  factory Car(CarModel model) {
-    switch (model) {
-      case CarModel.tesla:
-        return Tesla();
-      case CarModel.bmw:
-        return BMW();
-      case CarModel.mercedes:
-        return Mercedes();
-    }
-  }
   void create();
 }
 
-class Tesla implements Car {
+class CarTesla implements Car {
   @override
   void create() {
-    print('Створити машину Tesla');
+    print("Отримати машину Тесла");
   }
 }
 
-class BMW implements Car {
+class CarBMW implements Car {
   @override
   void create() {
-    print('Створити машину BMW');
+    print("Отримати машину BMW");
   }
 }
 
-class Mercedes implements Car {
+abstract class CarFactory {
+  Car createCar();
+}
+
+class ShopTesla implements CarFactory {
   @override
-  void create() {
-    print('Створити машину Mercedes');
+  Car createCar() {
+    return CarTesla();
   }
+}
+
+class ShopBMW implements CarFactory {
+  @override
+  Car createCar() {
+    return CarBMW();
+  }
+}
+
+void main() {
+  var model = "tesla";
+  late CarFactory modelCar;
+
+  switch (model) {
+    case "tesla":
+      modelCar = ShopTesla();
+      break;
+    case "bmw":
+      modelCar = ShopBMW();
+      break;
+    default:
+      print("No more cars...");
+  }
+  var myCar = modelCar.createCar();
+  myCar.create();
 }

@@ -40,3 +40,14 @@ class Kia implements Make {
     print('Kia');
   }
 }
+
+void main() {
+  Auto auto1 = Sedan(Audi());
+  Auto auto2 = Sedan(Kia());
+  Auto auto3 = Hatchback(Audi());
+  Auto auto4 = Hatchback(Kia());
+  auto1.showDetails();
+  auto2.showDetails();
+  auto3.showDetails();
+  auto4.showDetails();
+}

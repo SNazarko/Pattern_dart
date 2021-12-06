@@ -87,3 +87,18 @@ class Developer {
     delete.execute();
   }
 }
+
+void main() {
+  DatabaseClient databaseClient = DatabaseClient();
+  Developer developer = Developer(
+    insert: InsertCommand(databaseClient: databaseClient),
+    update: UpdateCommand(databaseClient: databaseClient),
+    select: SelectCommand(databaseClient: databaseClient),
+    delete: DeleteCommand(databaseClient: databaseClient),
+  );
+
+  developer.insertRecord();
+  developer.selectRecord();
+  developer.updateRecord();
+  developer.deleteRecord();
+}
