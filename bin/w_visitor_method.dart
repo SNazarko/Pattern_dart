@@ -43,7 +43,7 @@ class Body implements Car {
   }
 }
 
-class BodyPartStitchVisitor implements CarVisitor {
+class BodyCarVisitor implements CarVisitor {
   void visit(Car car) {
     if (car is Body) {
       print("Зробили ${car.name}.");
@@ -62,5 +62,5 @@ class BodyPartStitchVisitor implements CarVisitor {
 
 void main() {
   var body = Body();
-  body.accept(BodyPartStitchVisitor());
+  body.accept(BodyCarVisitor());
 }
