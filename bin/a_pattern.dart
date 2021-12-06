@@ -1,6 +1,3 @@
-import 'j_composite_method.dart';
-import 'k_decorator_method.dart';
-
 void main() {
   //-------------------factory_method-------------------------------//
 
@@ -11,7 +8,7 @@ void main() {
   // car2.create();
   // car3.create();
   //-------------------abstract_factory_method-----------------------//
-  //
+  // //
   // var model = "tesla";
   // late CarFactory modelCar;
   //
